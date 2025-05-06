@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class AddArray {
     public static void main(String[] args) {
@@ -10,8 +11,11 @@ public class AddArray {
         System.out.println("Enter the elements of the array:");
         for (int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
-            sum += arr[i];
         }
-        System.out.println("The sum of the elements of the array is: " + sum);
+	Arrays.sort(arr);
+	for(int e: arr){
+	    sum += e;
+	}
+        System.out.println("The sum of the elements of the sorted array is: " + sum);
     }
 }
